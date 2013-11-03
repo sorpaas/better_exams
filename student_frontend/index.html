@@ -30,8 +30,8 @@
       eventSupport = ('querySelector' in document && 'addEventListener' in window)
       jsonSupport  = (typeof JSON !== 'undefined'),
       jQuery       = (eventSupport && jsonSupport)
-        ? '/javascript/library/jquery.min.js'
-        : '/javascript/library/jquery.legacy.min.js'
+        ? 'javascript/library/jquery.min.js'
+        : 'javascript/library/jquery.legacy.min.js'
     ;
     document.write('<script src="' + jQuery + '"><\/script>');
   }());
@@ -79,7 +79,7 @@
     </a>
     <div class="item">
       <a href="http://semantic-ui.com/">
-        <b>Content</b>
+        <b>Questions</b>
       </a>
       <div class="menu">       
           <a class="active item" href="#q_lectures">I. Lectures</a>       
@@ -118,8 +118,7 @@ $(document)
     $('.demo.menu .item')
       .tab()
     ;
-  })
-;
+  });
 $(document).ready(function(){
     $('textarea').autosize();   
 	var target_date = new Date("4 Nov, 2013").getTime();
@@ -176,6 +175,10 @@ $(window).scroll(function(e) {
 	doScrollTopThenFix("#top2", "#scroller_anchor2");
 });
 });
+$(document).ready(function() {
+$('#menu').sidebar('hide');
+});
+
 </script>
 
   <script type="text/javascript" src="jquery.autosize.min.js"></script>
