@@ -14,7 +14,6 @@
   ],
   "scripts": {
     "start": "node app.js",
-    "predeploy": "node build.js"
   },
   "keywords": [
     "dillinger",
